@@ -1,0 +1,100 @@
+.space {
+    background-image: url('space.png');
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.planet-area {
+    display: flex;
+}
+
+.planet {
+    z-index: 0;
+    position: relative;
+}
+
+.rocket {
+    position: absolute;
+    left: 50vh;
+    top: 25vh;
+    height: 24%;
+    width: 12%;
+    transform: rotateZ(30deg);
+    z-index: 1;
+}
+
+.rocket-launched {
+    animation: rocketLaunch 5s linear;
+}
+
+.control-panel {
+    margin-left: 10px;
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    background: repeating-linear-gradient(45deg, yellow, yellow 10px, black 10px, black 20px);
+}
+
+.control-panel__inner {
+    background-color: #1A1110;
+    margin: 5px;
+    min-height: 50vh;
+    max-width: 40vw;
+}
+
+input[type=password] {
+    border: 1px solid yellow;
+    border-radius: 2px;
+    margin: 40px 0 40px 33%;
+    background-color: #1A1110;
+    color: white;
+}
+
+.passOk {
+    border: 1px solid yellow;
+    border-radius: 2px;
+    margin: 40px 0 40px 20px;
+    background-color: yellow;
+}
+
+.vertical {
+    transform: rotateZ(270deg) scale(.8);
+    margin:80px 0 30px 0;
+}
+
+.check-buttons, .levers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.launch {
+    border: 2px solid yellow;
+    border-radius: 50%;
+    background-color: red;
+    margin: 50px 0 20px 44%;
+    color: yellow;
+    font-size: 20px;
+    height: 50px;
+}
+
+@keyframes rocketLaunch {
+    25% {
+        left: 55vh;
+        top: 20vh;
+    }
+    50% {
+        left: 65vh;
+        top: 10vh;
+    }
+    75% {
+        left: 75vh;
+        top: 0;
+    }
+    100% {
+        left: 85vh;
+        top: -10vh;
+    }
+}
